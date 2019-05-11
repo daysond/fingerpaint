@@ -14,7 +14,7 @@
 		ED0874A92286077F00D13FA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0874A72286077F00D13FA4 /* LaunchScreen.storyboard */; };
 		ED0874AC2286077F00D13FA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0874AB2286077F00D13FA4 /* main.m */; };
 		ED0874B4228608F100D13FA4 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0874B3228608F100D13FA4 /* DrawingView.m */; };
-		ED0FD1DE228740F7005C6006 /* CustomePath.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0FD1DD228740F7005C6006 /* CustomePath.m */; };
+		ED0FD1E122874848005C6006 /* UIBezierPath+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0FD1E022874848005C6006 /* UIBezierPath+Color.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		ED0874AB2286077F00D13FA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED0874B2228608F000D13FA4 /* DrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
 		ED0874B3228608F100D13FA4 /* DrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
-		ED0FD1DC228740F7005C6006 /* CustomePath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomePath.h; sourceTree = "<group>"; };
-		ED0FD1DD228740F7005C6006 /* CustomePath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomePath.m; sourceTree = "<group>"; };
+		ED0FD1DF22874848005C6006 /* UIBezierPath+Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Color.h"; sourceTree = "<group>"; };
+		ED0FD1E022874848005C6006 /* UIBezierPath+Color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Color.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,13 +70,13 @@
 				ED0874A02286077E00D13FA4 /* ViewController.m */,
 				ED0874B2228608F000D13FA4 /* DrawingView.h */,
 				ED0874B3228608F100D13FA4 /* DrawingView.m */,
-				ED0FD1DC228740F7005C6006 /* CustomePath.h */,
-				ED0FD1DD228740F7005C6006 /* CustomePath.m */,
 				ED0874A22286077E00D13FA4 /* Main.storyboard */,
 				ED0874A52286077F00D13FA4 /* Assets.xcassets */,
 				ED0874A72286077F00D13FA4 /* LaunchScreen.storyboard */,
 				ED0874AA2286077F00D13FA4 /* Info.plist */,
 				ED0874AB2286077F00D13FA4 /* main.m */,
+				ED0FD1DF22874848005C6006 /* UIBezierPath+Color.h */,
+				ED0FD1E022874848005C6006 /* UIBezierPath+Color.m */,
 			);
 			path = FingerPaint;
 			sourceTree = "<group>";
@@ -153,7 +153,7 @@
 			files = (
 				ED0874A12286077E00D13FA4 /* ViewController.m in Sources */,
 				ED0874AC2286077F00D13FA4 /* main.m in Sources */,
-				ED0FD1DE228740F7005C6006 /* CustomePath.m in Sources */,
+				ED0FD1E122874848005C6006 /* UIBezierPath+Color.m in Sources */,
 				ED08749E2286077E00D13FA4 /* AppDelegate.m in Sources */,
 				ED0874B4228608F100D13FA4 /* DrawingView.m in Sources */,
 			);

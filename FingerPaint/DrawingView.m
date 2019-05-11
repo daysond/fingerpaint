@@ -11,7 +11,7 @@
 @interface DrawingView()
 
 
-@property (nonatomic) NSMutableArray <CustomePath*> *pathes;
+@property (nonatomic) NSMutableArray <UIBezierPath*> *pathes;
 
 
 @end
@@ -40,8 +40,10 @@
 -(void)setupGestureRecognizer {
     
     UIPanGestureRecognizer *recog = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(draw:)];
-    self.pathes = [[NSMutableArray alloc]initWithArray:@[]];
     [self addGestureRecognizer:recog];
+    self.pathes = [[NSMutableArray alloc]initWithArray:@[]];
+    self.strokeWidth = 10;
+    self.eraserEnabled = NO;
 }
 
 
@@ -51,8 +53,9 @@
     
     if (sender.state == UIGestureRecognizerStateBegan) {
         
-        self.path = [[CustomePath alloc] init];
+        self.path = [[UIBezierPath alloc] init];
         self.path.strokeColor = self.strokeColor;
+        self.path.strokeWidth = [NSNumber numberWithFloat:self.strokeWidth];
         [self.path moveToPoint: [sender locationInView:sender.view]];
         [self.pathes addObject:self.path];
     }
@@ -70,9 +73,9 @@
 
 - (void)drawRect:(CGRect)rect {
     
-    for (CustomePath* path in self.pathes) {
+    for (UIBezierPath* path in self.pathes) {
         [path.strokeColor setStroke];
-        [path setLineWidth:10.0];
+        [path setLineWidth:[path.strokeWidth floatValue]];
         [path stroke];
     }
 }

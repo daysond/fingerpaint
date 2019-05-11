@@ -54,6 +54,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qji-Ze-x4k">
                                 <rect key="frame" x="122" y="706" width="274" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="widthChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="gsu-FU-ViZ"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Width:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7U-ik-x0R">
                                 <rect key="frame" x="20" y="710" width="51" height="21"/>
@@ -62,13 +65,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pw-Q3-BDQ">
-                                <rect key="frame" x="74" y="710" width="29" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pw-Q3-BDQ">
+                                <rect key="frame" x="74" y="710" width="36" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4C-7u-S83">
+                                <rect key="frame" x="17" y="561" width="52" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Eraser"/>
+                                <connections>
+                                    <action selector="eraserButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6yK-eh-Yjh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -81,14 +92,17 @@
                     <connections>
                         <outlet property="blueSlider" destination="djJ-Rp-Bi6" id="6M0-Cr-Jty"/>
                         <outlet property="drawingArea" destination="rtO-MC-zlw" id="4qQ-T7-v5g"/>
+                        <outlet property="eraserButton" destination="q4C-7u-S83" id="lT8-FD-Pku"/>
                         <outlet property="greenSlider" destination="0fW-wG-HB3" id="FB2-A5-Rvs"/>
                         <outlet property="pickerView" destination="WyQ-fA-abr" id="AGt-42-Fja"/>
                         <outlet property="redSlider" destination="KaP-eE-kdC" id="lFH-TE-wAf"/>
+                        <outlet property="widthLabel" destination="5Pw-Q3-BDQ" id="esz-ZB-zFc"/>
+                        <outlet property="widthSlider" destination="qji-Ze-x4k" id="E17-6c-nRN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-328" y="206"/>
+            <point key="canvasLocation" x="-710" y="71"/>
         </scene>
     </scenes>
 </document>

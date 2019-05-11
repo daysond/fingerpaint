@@ -14,6 +14,9 @@
 @property (weak, nonatomic) IBOutlet UISlider *blueSlider;
 @property (weak, nonatomic) IBOutlet UISlider *greenSlider;
 @property (weak, nonatomic) IBOutlet DrawingView *drawingArea;
+@property (weak, nonatomic) IBOutlet UISlider *widthSlider;
+@property (weak, nonatomic) IBOutlet UILabel *widthLabel;
+@property (weak, nonatomic) IBOutlet UIButton *eraserButton;
 @property (nonatomic) CGFloat red;
 @property (nonatomic) CGFloat blue;
 @property (nonatomic) CGFloat green;
@@ -44,6 +47,22 @@
 - (IBAction)greenChanged:(UISlider *)sender {
     self.green = sender.value;
     [self setColor];
+}
+- (IBAction)widthChanged:(UISlider *)sender {
+    self.widthLabel.text = [NSString stringWithFormat:@"%d",(int)sender.value];
+    _drawingArea.strokeWidth = sender.value;
+}
+- (IBAction)eraserButtonTapped:(UIButton *)sender {
+    if (_drawingArea.eraserEnabled == NO) {
+        _drawingArea.eraserEnabled = YES;
+        [self.eraserButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal ];
+        _drawingArea.strokeColor = [UIColor whiteColor];
+    } else {
+        _drawingArea.eraserEnabled = NO;
+        [self.eraserButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal ];
+        _drawingArea.strokeColor = _pickerView.backgroundColor;
+    }
+
 }
 
 

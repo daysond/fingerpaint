@@ -1,5 +1,5 @@
 //
-//  CustomePath.h
+//  UIBezierPath+Color.h
 //  FingerPaint
 //
 //  Created by Dayson Dong on 2019-05-11.
@@ -10,9 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CustomePath : UIBezierPath
+@interface UIBezierPath (Color)
 
 @property (nonatomic) UIColor* strokeColor;
+@property (nonatomic) NSNumber* strokeWidth;
 
 @end
 
